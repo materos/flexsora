@@ -1,0 +1,113 @@
+body{
+    font-family: 'IBM Plex Sans', 'IBM Plex Serif', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-size: 1.6em;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.6;
+}
+
+h1, .bx--type-alpha {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    font-weight: 300;
+}
+
+h2, .bx--type-beta {
+    font-size: 1.75rem;
+    line-height: 1.25;
+    font-weight: 300;
+}
+
+h3, .bx--type-gamma {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-weight: 300;
+}
+
+h4, .bx--type-delta {
+    font-size: 1.125rem;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+a {
+    font-size: 0.875rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 600;
+    color: #3d70b2;
+    text-decoration: underline;
+    transition: 250ms;
+}
+
+a:focus {
+    font-size: 0.875rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 600;
+    color: #3d70b2;
+    text-decoration: underline;
+    transition: 250ms;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 38rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
+
+th {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: left;
+    line-height: 1.25;
+    padding: 1rem 3rem 1rem 0;
+    border-bottom: 2px solid #3057D5;
+    white-space: nowrap;
+}
+
+tr {
+    border-bottom: 1px solid #dfe3e6;
+}
+
+td {
+    font-size: 0.875rem;
+    padding: 1rem 3rem 1rem 0;
+    line-height: 1.25;
+}
+
+ol, ul {
+    padding: 1rem;
+    font-size: 0.875rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-left: 2rem;
+    line-height: 1.5;
+}
+
+ul > ul, 
+ul > ol, 
+ol > ol, 
+ol > ul{
+    margin-left: 0.5rem;
+}
+
+li{
+    padding-left: 0.25rem;
+}
+ul li{
+    list-style-type: disc;
+}
+ol li{
+    list-style-type: decimal;
+}
