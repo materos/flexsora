@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/styles/main.css">
+    <link rel="stylesheet" href="static/javascript/vendors/codemirror/codemirror.css">
+    <script src="static/javascript/vendors/jquery/jquery-3.3.1.min.js"></script>
+    <script src="static/javascript/vendors/microlight/microlight.js"></script>
+
+    <title>Tutorials</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="column small-12 medium-4 large-3">
+                    <a href="" class="logo">Обучалка</a>
+                </div>
+                <div class="column small-12 medium-4 large-3">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#all" class="nav__link">All</a></li>
+                            <li class="nav__item"><a href="#teaching" class="nav__link">Обучение</a></li>
+                            <li class="nav__item"><a href="#test" class="nav__link">Тестирование</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="row between-on-small">
+                <div class="column hide-on-small show-on-medium show-on-large medium-3 large-2">
+                    <aside class="aside">
+                        <h2 class="aside__title">Тэги</h2>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">
+                                    <span>HTML5</span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">
+                                    <span>CSS3</span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">
+                                    <span>JS</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="column small-12 medium-9 large-10">
+                    <section class="section">
+                        <h2 class="section__title">All</h2>
+
+                        <ul class="list">
+                            <li class="list__item">
+                                <div class="list__problem">
+                                    <h4 class="list__heading">Заготовка для сайта</h4>
+                                </div>
+                                <div class="list__solution">
+                                    <div class="microlight">
+// Demo code (the actual new parser character stream implementation)
+
+function StringStream(string) {
+  this.pos = 0;
+  this.string = string;
+}
+
+StringStream.prototype = {
+  done: function() {return this.pos >= this.string.length;},
+  peek: function() {return this.string.charAt(this.pos);},
+  next: function() {
+    if (this.pos &lt; this.string.length)
+      return this.string.charAt(this.pos++);
+  },
+  eat: function(match) {
+    var ch = this.string.charAt(this.pos);
+    if (typeof match == "string") var ok = ch == match;
+    else var ok = ch &amp;&amp; match.test ? match.test(ch) : match(ch);
+    if (ok) {this.pos++; return ch;}
+  },
+  eatWhile: function(match) {
+    var start = this.pos;
+    while (this.eat(match));
+    if (this.pos > start) return this.string.slice(start, this.pos);
+  },
+  backUp: function(n) {this.pos -= n;},
+  column: function() {return this.pos;},
+  eatSpace: function() {
+    var start = this.pos;
+    while (/\s/.test(this.string.charAt(this.pos))) this.pos++;
+    return this.pos - start;
+  },
+  match: function(pattern, consume, caseInsensitive) {
+    if (typeof pattern == "string") {
+      function cased(str) {return caseInsensitive ? str.toLowerCase() : str;}
+      if (cased(this.string).indexOf(cased(pattern), this.pos) == this.pos) {
+        if (consume !== false) this.pos += str.length;
+        return true;
+      }
+    }
+    else {
+      var match = this.string.slice(this.pos).match(pattern);
+      if (match &amp;&amp; consume !== false) this.pos += match[0].length;
+      return match;
+    }
+  }
+};
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
